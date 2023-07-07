@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::post('/addData',[StepOneTwoController::class, 'addData']);
+Route::get('/getData',[StepOneTwoController::class, 'getData']);

@@ -46,7 +46,22 @@ public function addData(Request $request){
 return response()->json([
     'status' => 200,
     'data' => $data,
-    'message' => 'resgister successfully',
+    'message' => 'data added successfully',
 ]);
 }
+
+
+public function getData(){
+
+    $result= StepOneTwo::orderBy('id', 'desc')->get();
+    return response()->json([
+        'status' => 200,
+        'message' => 'Data retrive successfully',
+        'data' => $result,
+    ]);
+
+}
+
+
+
 }
